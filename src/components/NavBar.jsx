@@ -6,7 +6,7 @@ import { useTasks } from "../context/TasksContext";
 const NavBar = () => {
 
   const router = useRouter();
-  const { tasks } = useTasks();//Context
+  const { tasks } = useTasks();
 
   return (
     <header className='flex items-center bg-gray-800 px-28 py-3 justify-between'>
