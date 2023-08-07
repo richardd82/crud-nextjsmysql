@@ -18,7 +18,8 @@
     "react-hook-form": "^7.45.4",
     "react-hot-toast": "^2.4.1",
     "sweetalert2": "^11.7.20",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "vercel": "^31.2.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
