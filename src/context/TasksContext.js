@@ -60,8 +60,13 @@ export const TaskProvider = ({ children }) => {
       // showConfirmButton: true,
       confirmButtonText: "Delete",
     }).then((value) => {
-      value.isConfirmed && setTasks([...tasks.filter((t) => t.id !== id)]);
-      toast.success('Task deleted successfully')
+      if(value.isConfirmed){
+        setTasks([...tasks.filter((t) => t.id !== id)]); 
+        toast.success('Task deleted successfully')
+       }else{ 
+        toast.error('Task not deleted');
+      }
+      
     });
   };
 

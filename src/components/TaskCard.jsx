@@ -6,14 +6,15 @@ const TaskCard = () => {
     const router = useRouter()
     // console.log(tasks)
     return (
-        <div style={{ background: "#202020", color: "white" }}>
+        <div>
             {tasks.map((t) => (
-                <div key={t.id}>                    
+                <div key={t.id}  className='bg-gray-700 hover:bg-slate-600 cursor-pointer px-20 py-5 m-2 flex justify-between'>                    
                     <div onClick={() => router.push(`/edit/${t.id}`)}>
                         <h1>{t.title}</h1>
-                        <p>{t.description}</p>
+                        <p className='text-gray-300'>{t.description}</p>
+                        <span className='text-gray-400 text-xs'>{t.id}</span>
                     </div>
-                        <button onClick={(e) => deleteTask(t.id)}>Delete</button>
+                        <button onClick={(e) => deleteTask(t.id)} className='bg-red-700 hover:bg-red-600 px-3 items-center w-24 h-11 rounded-lg text-center mt-2'>Delete</button>
                 </div>
             ))}
         </div>

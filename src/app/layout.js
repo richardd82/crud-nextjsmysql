@@ -1,6 +1,7 @@
 import NavBar from "@/components/NavBar.jsx";
 import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
+import { Layout } from "../components/Layout.jsx";
 import { TaskProvider } from "../context/TasksContext";
 import "./globals.css";
 
@@ -18,9 +19,9 @@ export default function RootLayout({ children }) {
         <title>{"Richard's To do"}</title>
       </head>
       <body className={inter.className}>
-        <NavBar />
         <TaskProvider>
-          {children}
+          <NavBar />
+          <Layout>{children}</Layout>
           <Toaster />
         </TaskProvider>
       </body>

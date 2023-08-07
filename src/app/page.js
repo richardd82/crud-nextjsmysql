@@ -4,8 +4,10 @@ const Page = () => {
   // console.log(tasks)
 
   return (
-    <div>
-      <TaskCard />
+    <div className="flex justify-center">
+      <div className="w-7/12">
+        <TaskCard />
+      </div>
     </div>
   );
 };
